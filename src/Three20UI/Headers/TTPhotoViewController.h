@@ -87,6 +87,7 @@
  */
 @property (nonatomic, retain) TTStyle* captionStyle;
 
+
 - (id)initWithPhoto:(id<TTPhoto>)photo;
 - (id)initWithPhotoSource:(id<TTPhotoSource>)photoSource;
 
