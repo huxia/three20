@@ -34,12 +34,15 @@
 
   BOOL _hidesExtras;
   BOOL _hidesCaption;
+
+  BOOL _hidesToolbar;
 }
 
 @property (nonatomic, retain) id<TTPhoto> photo;
 @property (nonatomic, retain) TTStyle*    captionStyle;
 @property (nonatomic)         BOOL        hidesExtras;
 @property (nonatomic)         BOOL        hidesCaption;
+@property (nonatomic)         BOOL        hidesToolbar;
 
 - (BOOL)loadPreview:(BOOL)fromNetwork;
 - (void)loadImage;

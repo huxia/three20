@@ -50,6 +50,8 @@
   NSTimer*          _slideshowTimer;
   NSTimer*          _loadTimer;
 
+  BOOL              _hidesToolbar;
+
   BOOL              _delayLoad;
 
   TTThumbsViewController* _thumbsController;

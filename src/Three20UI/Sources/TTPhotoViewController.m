@@ -509,6 +509,13 @@ static const NSInteger kActivityLabelTag          = 96;
   [_innerView addSubview:_toolbar];
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)viewDidLoad{
+  [super viewDidLoad];
+  if (_hidesToolbar) {
+    self->_toolbar.hidden = YES;
+  }
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidUnload {
@@ -832,6 +839,7 @@ static const NSInteger kActivityLabelTag          = 96;
     photoView.captionStyle = _captionStyle;
     photoView.defaultImage = _defaultImage;
     photoView.hidesCaption = _toolbar.alpha == 0;
+    photoView.hidesToolbar = _hidesToolbar;
   }
 
   id<TTPhoto> photo = [_photoSource photoAtIndex:pageIndex];
