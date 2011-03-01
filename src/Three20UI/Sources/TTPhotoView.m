@@ -176,7 +176,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)layoutSubviews {
-  CGRect screenBounds = TTScreenBounds();
+  CGRect screenBounds = [self superview] ? [self superview].frame : TTScreenBounds();
   CGFloat width = self.width;
   CGFloat height = self.height;
   CGFloat cx = self.bounds.origin.x + width/2;
